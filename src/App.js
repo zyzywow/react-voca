@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./css/layout.css";
+import Footer from "./compornents/Footer";
+import Header from "./compornents/Header";
+import Days from "./compornents/Days";
+import Day from "./compornents/Day";
+import InsertDay from "./compornents/InsertDay";
+import InsertVoca from "./compornents/InsertVoca";
 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+// react에선 a태그를 사용하지 않는다.
+// routing을 위해 react-router-dom을 npm i 해서 설치 후 사용한다.
+// 그리고 App전체를 BrowserRouter로 감싸고 링크걸어서 바뀌는 곳은 Routes안에 Route로 만들어서 사용한다.
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Days />} />
+          <Route path="/insert/day" element={<InsertDay />} />
+          <Route path="/insert/voca" element={<InsertVoca />} />
+          <Route path="/day/:day" element={<Day />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
+// 간단한 서버사용할때 json-server 설치 후 사용(테스트서버임) npm i json-server
 export default App;
