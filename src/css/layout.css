@@ -145,6 +145,52 @@ li {
   border-radius: 100px;
 }
 
+.vocas {
+  display: flex;
+  flex-direction: column;
+}
+.vocas li {
+  display: flex;
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 20px;
+  height: 50px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  align-items: center;
+  color: #111;
+  position: relative;
+  transition: background 0.25s ease;
+}
+.vocas li.done {
+  background-color: #666;
+}
+.vocas li.done .word {
+  opacity: 0.5;
+}
+.vocas li.done .btns {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.vocas li .word {
+  margin-left: 20px;
+  transition: all 0.25s ease;
+}
+.vocas li .btns {
+  transition: all 0.25s ease;
+  position: absolute;
+  right: 20px;
+  margin-top: 0;
+}
+.vocas li .btns .btn {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+.vocas li .btns .del {
+  margin-left: 10px;
+  background-color: rgb(253, 47, 47);
+}
+
 #footer {
   display: flex;
   justify-content: center;

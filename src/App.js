@@ -8,6 +8,7 @@ import InsertDay from "./compornents/InsertDay";
 import InsertVoca from "./compornents/InsertVoca";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import UseRefComponent from "./compornents/UseRefComponent";
 
 // react에선 a태그를 사용하지 않는다.
 // routing을 위해 react-router-dom을 npm i 해서 설치 후 사용한다.
@@ -16,7 +17,10 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        {/* <UseRefComponent /> */}
         <Header />
+        {/* 경로가 변경되는것들은 Routes안에 포함 */}
+        {/* path="~~" ~~주소를 만났을떄 element를 실행 */}
         <Routes>
           <Route path="/" element={<Days />} />
           <Route path="/insert/day" element={<InsertDay />} />

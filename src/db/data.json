@@ -15,42 +15,50 @@
     {
       "day": 4,
       "id": 4
+    },
+    {
+      "day": 5,
+      "id": 5
+    },
+    {
+      "day": 6,
+      "id": 6
     }
   ],
   "voca": [
     {
-      "day": 1,
-      "eng": "lion",
       "kor": "사자",
+      "eng": "lion",
       "isDone": true,
-      "id": 1
+      "id": 1,
+      "day": 1
     },
     {
-      "day": 1,
-      "eng": "tiger",
       "kor": "호랑이",
+      "eng": "tiger",
       "isDone": false,
-      "id": 2
+      "id": 2,
+      "day": 1
     },
     {
-      "day": 2,
-      "eng": "rabbit",
       "kor": "토끼",
-      "isDone": true,
-      "id": 3
+      "eng": "rabbit",
+      "isDone": false,
+      "id": 3,
+      "day": 2
     },
     {
-      "day": 2,
-      "eng": "dog",
       "kor": "강아지",
+      "eng": "dog",
       "isDone": false,
-      "id": 4
+      "id": 4,
+      "day": 2
     },
     {
       "day": 3,
       "eng": "cat",
       "kor": "고양이",
-      "isDone": true,
+      "isDone": false,
       "id": 5
     },
     {
@@ -59,6 +67,27 @@
       "kor": "말",
       "isDone": false,
       "id": 6
+    },
+    {
+      "kor": "곰",
+      "eng": "bear",
+      "isDone": false,
+      "id": 7,
+      "day": 3
+    },
+    {
+      "day": 2,
+      "eng": "monkey",
+      "kor": "원숭이",
+      "isDone": false,
+      "id": 8
+    },
+    {
+      "day": 4,
+      "eng": "apple",
+      "kor": "사과",
+      "isDone": false,
+      "id": 9
     }
   ]
 }
