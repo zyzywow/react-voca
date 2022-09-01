@@ -216,3 +216,10 @@ $blue: rgb(0, 3, 170);
     }
   }
 }
+
+@media all and (max-width: 1200px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+}

@@ -35,3 +35,5 @@ function App() {
 
 // 간단한 서버사용할때 json-server 설치 후 사용(테스트서버임) npm i json-server
 export default App;
+
+// $ npx json-server --watch src/db/data.json --port 5000

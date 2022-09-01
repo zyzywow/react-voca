@@ -10,7 +10,7 @@ export default function Day() {
   const [voca, setVoca] = useState([]);
   // queryString
   useEffect(() => {
-    axios.get(`http://127.0.0.1:5000/voca?day=${day}`).then((res) => {
+    axios.get(`https://zyzy-voca.herokuapp.com/voca/${day}`).then((res) => {
       setVoca(res.data);
       // console.log(res.data);
     });

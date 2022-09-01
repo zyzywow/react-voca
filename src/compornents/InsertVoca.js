@@ -20,15 +20,15 @@ export default function InsertVoca() {
     console.log(kor.current.value);
     console.log(day.current.value);
     axios
-      .post(`http://127.0.0.1:5000/voca/`, {
+      .post(`https://zyzy-voca.herokuapp.com/voca/add`, {
         day: parseInt(day.current.value),
         eng: eng.current.value,
         kor: kor.current.value,
         isDone: false,
       })
       .then((res) => {
-        // console.log("입력되었습니다.");
-        if (res.statusText === "Created") {
+        // console.log(res.data.insert);
+        if (res.data.insert === "ok") {
           alert("입력되었습니다.");
           navigate(`/day/${day.current.value}`);
           // 입력되고나서 원하는곳으로 화면을 보내고싶을때 navigate
@@ -36,7 +36,7 @@ export default function InsertVoca() {
       });
   };
   useEffect(() => {
-    axios.get(`http://127.0.0.1:5000/days`).then((res) => {
+    axios.get(`https://zyzy-voca.herokuapp.com/days`).then((res) => {
       // console.log(res.data);
       setDays(res.data);
     });

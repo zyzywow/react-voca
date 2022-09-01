@@ -7,9 +7,9 @@ export default function Days() {
   const [days, setDays] = useState([]);
   // state가 변경될때마다 감지를 해서 실행을 한다.
   useEffect(() => {
-    axios.get("http://127.0.0.1:5000/days").then((res) => {
+    axios.get("http://127.0.0.1:8099/days").then((res) => {
       setDays(res.data);
-      console.log(days);
+      // console.log(days);
     });
   }, []);
   // [days]<- 움직임을 감지할 대상,대상의 상태가 바뀔때마다 useEffect실행(아무것도 안쓰면 어떠한대상이라도 상태가바뀌면 실행됨), [] <-빈배열은 로딩 후 한번만실행

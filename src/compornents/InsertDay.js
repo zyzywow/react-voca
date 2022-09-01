@@ -7,20 +7,20 @@ export default function InsertDay() {
   const navigate = useNavigate();
   const [days, setDays] = useState([]);
   useEffect(() => {
-    axios.get("http://127.0.0.1:5000/days").then((res) => {
+    axios.get("https://zyzy-voca.herokuapp.com/days").then((res) => {
       setDays(res.data);
     });
   }, []);
 
   const insertDay = () => {
     // axios를 가지고 json-server에 데이터 밀어넣기..
-    axios.post("http://127.0.0.1:5000/days", { day: days.length + 1 }).then((res) => {
-      // console.log(res);
-      if (res.statusText === "Created") {
+    axios.post("https://zyzy-voca.herokuapp.com/day/add", { day: days.length + 1 }).then((res) => {
+      // console.log(res.data);
+      if (res.data.insert === "ok") {
         alert("day가 추가되었습니다.");
         navigate("/");
 
-        // location.href="/"; ------spa에 어긋남 사용xx
+        //   // location.href="/"; ------spa에 어긋남 사용xx
       }
     });
   };
