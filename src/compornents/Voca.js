@@ -8,7 +8,7 @@ export default function Voca(props) {
   console.log(info);
   const [isVisible, setIsVisible] = useState(true);
   const [isDone, setIsDone] = useState(props.isDone);
-  const toggleKor = function () {
+  const toggleEng = function () {
     // console.log(isVisible);
     setIsVisible(!isVisible);
   };
@@ -63,10 +63,10 @@ export default function Voca(props) {
           <span className="label"></span>
         </label>
       </div>
-      <div className="eng word">{props.eng}</div>
-      <div className="kor word">{isVisible && props.kor}</div>
+      <div className="kor word">{props.kor}</div>
+      <div className="eng word">{isVisible && props.eng}</div>
       <div className="btns">
-        <button className="btn hidden" onClick={toggleKor}>
+        <button className="btn hidden" onClick={toggleEng}>
           HIDDEN
         </button>
         <button className="btn del" onClick={deleteVoca}>
